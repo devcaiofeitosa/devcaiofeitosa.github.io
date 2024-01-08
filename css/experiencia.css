@@ -1,0 +1,142 @@
+.experiencia {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.experiencia .subtitulo {
+  color: #e0e0e0;
+}
+
+.experiencia-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #525252;
+}
+
+.experiencia-texto strong {
+  color: #141414;
+}
+
+.empresa {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.anos-trabalhados {
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: 1.5rem;
+  width: 12%;
+}
+
+.empresa-titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa-texto {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: #525252;
+}
+
+.empresa-cargo {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  border: solid 1px #f0f0f0;
+  border-radius: 5px;
+  background: #f5f5f5;
+  display: grid;
+  grid-template-columns: 325px 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+}
+
+.empresa-cargo::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  position: absolute;
+  top: 25px;
+  left: -4px;
+}
+
+.descricao {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.lista-linguagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.lista-linguagens li p {
+  padding: 0.6rem;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.container-experiencias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .empresa-cargo {
+    width: auto;
+  }
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+  .experiencia-texto {
+    font-size: 1.252rem;
+  }
+  .empresa {
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+  }
+  .anos-trabalhados {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    width: initial;
+  }
+  .anos-trabalhados::before {
+    content: "Ano: ";
+  }
+}
+
+@media (max-width: 1200px) {
+  .empresa-cargo {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .empresa-cargo {
+    grid-template-columns: 1fr;
+  }
+}

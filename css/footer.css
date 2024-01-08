@@ -1,0 +1,83 @@
+.rodape {
+  background: #000;
+  color: #FFF;
+}
+
+.container-rodape {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.container-rodape::before {
+  content: "";
+  background-image: url("../img/detalhe.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 9999;
+}
+
+.rodape-texto {
+  align-self: center;
+  color: #ccc;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.menu-rodape {
+  display: grid;
+  gap: 30px;
+}
+
+.menu-rodape li a{
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 40px;
+  color: #FFF;
+}
+
+.rodape-copyright {
+  font-size: 1.125rem;
+  color: #8F8F8F;
+}
+
+
+@media(max-width:800px) {
+  .menu-rodape {
+    gap: 10px;
+  }
+  .menu-rodape li a {
+    font-size: 1.5rem;
+  }
+  .container-rodape {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rodape-texto {
+    font-size: 1.25rem;
+    max-width: 50ch;
+  }
+  .container-rodape::before {
+    display: none;
+  }
+}
+
+@media(max-width:1000px) {
+  .container-rodape::before {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    left: 20px;
+  }
+}
+
+
